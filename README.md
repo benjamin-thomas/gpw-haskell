@@ -5,9 +5,9 @@ doctest ./lesson03.hs
 # Or
 ghcid --command="ghci ./lesson03.hs" --test=':!doctest ./lesson03.hs'
 # Or
-ghcid --command="ghci -Wall ./lesson14/q2.hs" --test=':!doctest **/*.hs'
+ghcid --command="ghci -Wall ./lesson14/q2.hs" --test=':!doctest *.hs **/*.hs'
 # Or
-ghcid --command="ghci -Wall ./lesson15/*" --test=':!doctest **/*.hs'
+ghcid --command="ghci -Wall ./lesson15/*" --test=':!doctest *.hs **/*.hs'
 ```
 
 Reload in GHCi with:
