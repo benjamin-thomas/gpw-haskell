@@ -1,12 +1,8 @@
-{-# LANGUAGE LambdaCase #-}
-
 module TimeSeries where
 
-import Data.List
 import Data.Map (Map)
 import Data.Map qualified as Map
 import Data.Maybe
-import Data.Semigroup
 
 {-
 
