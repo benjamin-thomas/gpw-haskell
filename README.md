@@ -1,4 +1,4 @@
-Run tests with
+## Run tests with
 
 ```sh
 doctest ./lesson03.hs
@@ -14,4 +14,11 @@ Reload in GHCi with:
 
 ```ghci
 :cmd return $ unlines [":reload", "getAttack killerRobot"]
+```
+
+## Install global dependencies with
+
+```sh
+cabal install --lib random     # System.Random
+cabal install --lib containers # Data.Map
 ```

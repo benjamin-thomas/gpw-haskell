@@ -2,7 +2,7 @@ module TimeSeries where
 
 import Data.Map (Map)
 import Data.Map qualified as Map
-import Data.Maybe
+import Data.Maybe (catMaybes)
 
 {-
 
