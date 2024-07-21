@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Example usage
+# ./manage/reload_repl_on_change        # <-- just reload the REPL
+# ./manage/reload_repl_on_change hello  # <-- continuously rexecutes the "hello" function
+# ./manage/reload_repl_on_change :main  # <-- continuously rexecutes main
+
+echo "$(date): Will reload the REPL on next file change..."
+
+while true; do
+    exec rg --files --type haskell | entr -p ./manage/utils/reload_repl "$1"
+
+    # Watcher may crash if files have been renamed for instance.
+    echo "$(date): Reloading watcher..."
+    sleep 1
+done

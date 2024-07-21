@@ -1,3 +1,8 @@
+## ghcid-less workflow
+
+1. In tmux pane 0, launch: `ghci ./my_work_in_progress.hs`
+2. In tmux pane 1, launch: `./manage/reload_repl_on_change`
+
 ## Run tests with
 
 ```sh
@@ -37,4 +42,5 @@ Reload in GHCi with:
 ```sh
 cabal install --lib random     # System.Random
 cabal install --lib containers # Data.Map
+cabal install --lib text       # Data.Text
 ```
