@@ -10,5 +10,5 @@ And use `mapM_` to print out the values.
  -}
 main :: IO ()
 main = do
-    values <- mapM (const getLine) [(), (), ()] -- or use [1..3]
+    values :: [String] <- mapM (const getLine) [(), (), ()] -- or use [1..3]
     mapM_ putStrLn values
