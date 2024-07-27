@@ -47,4 +47,5 @@ cabal install --lib random      # System.Random
 cabal install --lib containers  # Data.Map
 cabal install --lib text        # Data.Text
 cabal install --lib bytestring  # Data.ByteString
+cabal install --lib deepseq     # Control.DeepSeq
 ```
