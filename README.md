@@ -15,6 +15,8 @@ ghcid --command="ghci -Wall ./lesson14/q2.hs" --test=':!doctest *.hs **/*.hs'
 ghcid --command="ghci -Wall ./lesson15/*" --test=':!doctest *.hs **/*.hs'
 # Or
 echo ./lesson22/01_interact_non_lazy.hs | entr -c runghc -Wall /_
+# Or (with linting, into a lesson folder)
+ghcid --lint="hlint --color=always" -c 'ghci ./02_*.hs' -T ':!doctest ./02_*.hs'
 ```
 
 ### Color output quirks
@@ -40,7 +42,9 @@ Reload in GHCi with:
 ## Install global dependencies with
 
 ```sh
-cabal install --lib random     # System.Random
-cabal install --lib containers # Data.Map
-cabal install --lib text       # Data.Text
+cabal install hlint
+cabal install --lib random      # System.Random
+cabal install --lib containers  # Data.Map
+cabal install --lib text        # Data.Text
+cabal install --lib bytestring  # Data.ByteString
 ```
