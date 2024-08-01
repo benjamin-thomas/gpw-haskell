@@ -1,0 +1,5 @@
+This make the hls fail in odd ways!
+Don't use this at **any** root
+cradle:
+  direct:
+    arguments: ["-Wall"]
