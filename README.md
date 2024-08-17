@@ -49,3 +49,16 @@ cabal install --lib text        # Data.Text
 cabal install --lib bytestring  # Data.ByteString
 cabal install --lib deepseq     # Control.DeepSeq
 ```
+
+---
+
+Printing tip! (KISS)
+
+```
+ghci> pp = Text.Pretty.Simple.pPrint
+ghci> pp $ Just (1,2)
+Just
+    ( 1
+    , 2
+    )
+```
