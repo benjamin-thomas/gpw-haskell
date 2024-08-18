@@ -7,9 +7,19 @@ build-type:      Simple
 common warnings
     ghc-options: -Wall
 
+
+-- http-conduit provides Network-HTTP-Simple
 executable noaa-http-client
     import:           warnings
     main-is:          Main.hs
     build-depends:    base ^>=4.17.2.1
+                    , http-conduit
+                    , http-types
+                    , bytestring
     hs-source-dirs:   app
     default-language: Haskell2010
+
+    default-extensions:
+        -- Defining OverloadedStrings here is "better" because it activates by
+        -- default when launching `cabal repl`
+        OverloadedStrings

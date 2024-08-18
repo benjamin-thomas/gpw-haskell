@@ -27,3 +27,16 @@ Watch run with on of:
 rg --files | entr -c bash -c 'envdir .env cabal run'
 rg --files | entr -c bash -c 'envdir .env cabal -v0 run'
 ```
+
+Or if needing to inspect data structures with a pretty-printer:
+
+```
+cabal repl --repl-options "-interactive-print=Text.Pretty.Simple.pPrint" --build-depends pretty-simple
+```
+
+---
+
+API documentation at: https://www.ncei.noaa.gov/cdo-web/webservices/v2
+
+---
+
