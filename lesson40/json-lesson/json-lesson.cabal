@@ -11,6 +11,7 @@ common warnings
 executable json-lesson
     import:           warnings
     main-is:          Main.hs
+    other-modules:    AesonBasics
     build-depends:    base ^>=4.17.2.1
                     , aeson
                     , bytestring
