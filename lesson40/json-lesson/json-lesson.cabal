@@ -3,7 +3,6 @@ name:            json-lesson
 version:         0.1.0.0
 license:         NONE
 build-type:      Simple
-extra-doc-files: CHANGELOG.md
 
 common warnings
     ghc-options: -Wall
@@ -12,6 +11,7 @@ executable json-lesson
     import:           warnings
     main-is:          Main.hs
     other-modules:    AesonBasics
+                    , NOAA
     build-depends:    base ^>=4.17.2.1
                     , aeson
                     , bytestring
